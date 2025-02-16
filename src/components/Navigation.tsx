@@ -1,16 +1,17 @@
-import { useState } from "react";
 import ModeToggle from "./mode-toggle";
 import NavItem from "./NavItem/nav-item";
 
-const navItems = [
-  { title: "About", href: "about" },
-  { title: "Projects", href: "projects" },
-  { title: "Contact", href: "contact" },
-];
-
-const Navigation = () => {
+const Navigation = ({
+  isProjectInView,
+  isAboutInView,
+  isExperienceInView,
+}: {
+  isProjectInView: boolean;
+  isAboutInView: boolean;
+  isExperienceInView: boolean;
+}) => {
   return (
-    <div className="flex flex-col gap-4 col-span-1 items-center text-center lg:items-start lg:text-left">
+    <div className="flex flex-col gap-4 col-span-1 items-center text-center lg:items-start lg:text-left lg:sticky lg:top-0 lg:max-h-screen lg:py-24">
       <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl">
         LongDDH
       </h1>
@@ -23,9 +24,13 @@ const Navigation = () => {
       </p>
       <ModeToggle />
       <ul className="w-max hidden lg:flex flex-col gap-4">
-        {navItems.map((item) => (
-          <NavItem key={item.href} {...item} />
-        ))}
+        <NavItem title="About" href="about" isActive={isAboutInView} />
+        <NavItem title="Projects" href="projects" isActive={isProjectInView} />
+        <NavItem
+          title="Experience"
+          href="experience"
+          isActive={isExperienceInView}
+        />
       </ul>
     </div>
   );
