@@ -1,4 +1,4 @@
-import About from "./components/about";
+import About from "./components/Section/about";
 import Navigation from "./components/Navigation";
 import { ThemeProvider } from "./components/theme-provider";
 import useIsSectionInView from "./hooks/useIsSectionInView";
@@ -21,29 +21,27 @@ function App() {
           isAboutInView={isAboutInView}
           isExperienceInView={isExperienceInView}
         />
-        <div className="col-span-2">
+        <div className="col-span-2 pt-24">
           <section
             ref={aboutRef}
-            className="mb-16 scroll-mt-16 md:mb-24 lg:mb-36 lg:scroll-mt-24 pt-24"
+            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
             id="about"
           >
             <About />
           </section>
           <section
             ref={projectRef}
-            className="col-span-2 h-screen py-24"
+            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
             id="projects"
           >
-            <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
-              Projects
-            </h2>
+            <h2 className="text-3xl font-semibold tracking-tight">Projects</h2>
           </section>
           <section
             ref={experienceRef}
-            className="col-span-2 h-screen py-24"
+            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
             id="experience"
           >
-            <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight">
+            <h2 className=" text-3xl font-semibold tracking-tight">
               Experience
             </h2>
           </section>

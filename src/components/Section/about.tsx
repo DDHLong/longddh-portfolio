@@ -1,3 +1,5 @@
+import WavyText from "../WavyText";
+
 const About = () => {
   return (
     <div>
@@ -36,8 +38,11 @@ const About = () => {
           a deep understanding of different business needs.
         </p>
         <p className="mb-4">
-          In my free time, I enjoy hanging out with my girlfriend, going around
-          Ha Noi, and playing board games with her.
+          In my free time, I enjoy hanging out with{" "}
+          <span className="lg:cursor-[url('/src/assets/dau.png'),_pointer] text-sky-300 font-medium">
+            <WavyText text="my girlfriend" className="inline-block" />
+          </span>
+          , going around Ha Noi, and playing board games with her.
         </p>
       </div>
     </div>
