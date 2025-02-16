@@ -11,7 +11,7 @@ const Navigation = ({
   isExperienceInView: boolean;
 }) => {
   return (
-    <div className="flex flex-col gap-4 col-span-1 items-center text-center lg:items-start lg:text-left lg:sticky lg:top-0 lg:max-h-screen lg:py-24">
+    <div className="flex flex-col gap-4 col-span-1 items-center text-center lg:items-start lg:text-left lg:sticky lg:top-0 lg:max-h-screen pt-24">
       <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl">
         LongDDH
       </h1>
