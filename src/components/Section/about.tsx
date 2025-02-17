@@ -37,13 +37,13 @@ const About = () => {
           . This diversity has allowed me to develop a wide range of skills and
           a deep understanding of different business needs.
         </p>
-        <p className="mb-4">
+        <div className="mb-4">
           In my free time, I enjoy hanging out with{" "}
           <span className="lg:cursor-[url('/src/assets/dau.png'),_pointer] text-primary font-medium hover:text-sky-400 focus-visible:text-sky-400">
             <WavyText text="my girlfriend" className="inline-block" />
           </span>
           , going around Ha Noi, and playing board games with her.
-        </p>
+        </div>
       </div>
     </div>
   );
