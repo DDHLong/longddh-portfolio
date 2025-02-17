@@ -16,13 +16,13 @@ function App() {
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      <div className="w-full min-h-screen px-20 bg-background grid grid-cols-1 lg:grid-cols-3 lg:gap-20 max-w-screen-xl mx-auto">
+      <div className="w-full min-h-screen px-6 lg:px-20 bg-background grid grid-cols-1 lg:grid-cols-3 lg:gap-20 max-w-screen-xl mx-auto">
         <Navigation
           isProjectInView={isProjectInView}
           isAboutInView={isAboutInView}
           isExperienceInView={isExperienceInView}
         />
-        <div className="col-span-2 pt-24">
+        <div className="col-span-2 lg:pt-24">
           <section
             ref={aboutRef}
             className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"

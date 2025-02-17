@@ -9,5 +9,21 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const setTheme = () => {
+        const savedTheme = localStorage.getItem("theme");
+        if (!savedTheme) localStorage.setItem("theme", "system");
+        const { classList } = document.body;
+        if (savedTheme === "system" || !savedTheme) {
+          const isDark = window.matchMedia(
+            "(prefers-color-scheme: dark)"
+          ).matches;
+          if (isDark) classList.add("dark");
+        } else if (savedTheme === "dark") {
+          classList.add("dark");
+        }
+      };
+      setTheme();
+    </script>
   </body>
 </html>
