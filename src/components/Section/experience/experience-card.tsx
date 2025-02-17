@@ -30,7 +30,7 @@ const ExperienceCard = ({
     <li className="!mb-8">
       <a href={link} target="_blank">
         <Glow color="oklch(0.746 0.16 232.661)" className="rounded-xl">
-          <Card className="w-full transition-all duration-300 bg-transparent group">
+          <Card className="w-full transition-all duration-300 group hover:shadow-lg">
             <CardHeader>
               <div className="flex items-center justify-between gap-4">
                 <div className="space-y-1">
