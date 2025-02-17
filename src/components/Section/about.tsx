@@ -3,7 +3,7 @@ import WavyText from "../WavyText";
 const About = () => {
   return (
     <div>
-      <h2 className="scroll-m-20 text-3xl font-semibold tracking-tight lg:hidden block mb-4">
+      <h2 className="scroll-m-20 text-xl font-semibold tracking-tight lg:hidden block mb-4">
         About
       </h2>
       <div className="text-lg text-muted-foreground">
@@ -39,7 +39,7 @@ const About = () => {
         </p>
         <p className="mb-4">
           In my free time, I enjoy hanging out with{" "}
-          <span className="lg:cursor-[url('/src/assets/dau.png'),_pointer] text-sky-300 font-medium">
+          <span className="lg:cursor-[url('/src/assets/dau.png'),_pointer] text-primary font-medium hover:text-sky-400 focus-visible:text-sky-400">
             <WavyText text="my girlfriend" className="inline-block" />
           </span>
           , going around Ha Noi, and playing board games with her.
