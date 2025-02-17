@@ -25,12 +25,12 @@ const Navigation = ({
       <ModeToggle />
       <ul className="w-max hidden lg:flex flex-col gap-4">
         <NavItem title="About" href="about" isActive={isAboutInView} />
-        <NavItem title="Projects" href="projects" isActive={isProjectInView} />
         <NavItem
           title="Experience"
           href="experience"
           isActive={isExperienceInView}
         />
+        <NavItem title="Projects" href="projects" isActive={isProjectInView} />
       </ul>
     </div>
   );

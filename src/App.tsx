@@ -2,6 +2,7 @@ import About from "./components/Section/about";
 import Navigation from "./components/Navigation";
 import { ThemeProvider } from "./components/theme-provider";
 import useIsSectionInView from "./hooks/useIsSectionInView";
+import Experience from "./components/Section/experience/experience";
 
 function App() {
   const {
@@ -30,20 +31,18 @@ function App() {
             <About />
           </section>
           <section
-            ref={projectRef}
-            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
-            id="projects"
-          >
-            <h2 className="text-3xl font-semibold tracking-tight">Projects</h2>
-          </section>
-          <section
             ref={experienceRef}
             className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
             id="experience"
           >
-            <h2 className=" text-3xl font-semibold tracking-tight">
-              Experience
-            </h2>
+            <Experience />
+          </section>
+          <section
+            ref={projectRef}
+            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24 h-screen"
+            id="projects"
+          >
+            <h2 className="text-3xl font-semibold tracking-tight">Projects</h2>
           </section>
         </div>
       </div>
