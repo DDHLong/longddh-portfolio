@@ -1,4 +1,3 @@
-import React, { memo } from "react";
 import avatarDark from "../assets/longddh96.png";
 import avatarLight from "../assets/longddh-light.png";
 import sun from "../assets/sun.png";
