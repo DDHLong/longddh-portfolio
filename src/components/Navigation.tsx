@@ -24,13 +24,22 @@ const Navigation = ({
       </p>
       <ModeToggle />
       <ul className="w-max hidden lg:flex flex-col gap-4">
-        <NavItem title="About" href="about" isActive={isAboutInView} />
-        <NavItem
-          title="Experience"
-          href="experience"
-          isActive={isExperienceInView}
-        />
-        <NavItem title="Projects" href="projects" isActive={isProjectInView} />
+        {[
+          { title: "About", href: "about", isActive: isAboutInView },
+          {
+            title: "Experience",
+            href: "experience",
+            isActive: isExperienceInView,
+          },
+          { title: "Projects", href: "projects", isActive: isProjectInView },
+        ].map((item) => (
+          <NavItem
+            key={item.href}
+            title={item.title}
+            href={item.href}
+            isActive={item.isActive}
+          />
+        ))}
       </ul>
     </div>
   );

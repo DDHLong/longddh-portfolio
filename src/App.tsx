@@ -3,6 +3,7 @@ import Navigation from "./components/Navigation";
 import { ThemeProvider } from "./components/theme-provider";
 import useIsSectionInView from "./hooks/useIsSectionInView";
 import Experience from "./components/Section/experience/experience";
+import Projects from "./components/Section/projects/projects";
 
 function App() {
   const {
@@ -23,27 +24,20 @@ function App() {
           isExperienceInView={isExperienceInView}
         />
         <div className="col-span-2 lg:pt-24">
-          <section
-            ref={aboutRef}
-            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
-            id="about"
-          >
-            <About />
-          </section>
-          <section
-            ref={experienceRef}
-            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
-            id="experience"
-          >
-            <Experience />
-          </section>
-          <section
-            ref={projectRef}
-            className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24 h-screen"
-            id="projects"
-          >
-            <h2 className="text-3xl font-semibold tracking-tight">Projects</h2>
-          </section>
+          {[
+            { ref: aboutRef, id: "about", Component: About },
+            { ref: experienceRef, id: "experience", Component: Experience },
+            { ref: projectRef, id: "projects", Component: Projects },
+          ].map(({ ref, id, Component }) => (
+            <section
+              key={id}
+              ref={ref}
+              className="mb-16 md:mb-24 lg:mb-30 lg:scroll-mt-24"
+              id={id}
+            >
+              <Component />
+            </section>
+          ))}
         </div>
       </div>
     </ThemeProvider>
