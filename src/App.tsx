@@ -1,9 +1,10 @@
 import About from "./components/Section/about";
-import Navigation from "./components/Navigation";
 import { ThemeProvider } from "./components/theme-provider";
 import useIsSectionInView from "./hooks/useIsSectionInView";
 import Experience from "./components/Section/experience/experience";
 import Projects from "./components/Section/projects/projects";
+import Footer from "./components/footer";
+import Navigation from "./components/nav";
 
 function App() {
   const {
@@ -38,6 +39,7 @@ function App() {
               <Component />
             </section>
           ))}
+          <Footer />
         </div>
       </div>
     </ThemeProvider>
