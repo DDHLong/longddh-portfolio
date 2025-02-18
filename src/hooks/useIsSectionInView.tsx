@@ -4,7 +4,7 @@ import { useRef } from "react";
 const useIsSectionInView = () => {
   const projectRef = useRef(null);
   const isProjectInView = useInView(projectRef, {
-    amount: 0.5,
+    amount: 0.6,
   });
   const aboutRef = useRef(null);
   const isAboutInView = useInView(aboutRef, {
@@ -12,7 +12,7 @@ const useIsSectionInView = () => {
   });
   const experienceRef = useRef(null);
   const isExperienceInView = useInView(experienceRef, {
-    amount: 0.7,
+    amount: 0.6,
   });
   return {
     isProjectInView,

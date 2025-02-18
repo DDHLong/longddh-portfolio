@@ -1,4 +1,4 @@
-import WavyText from "../WavyText";
+import WavyText from "../wavy-text";
 
 const About = () => {
   return (
@@ -51,7 +51,11 @@ const About = () => {
 
 export default About;
 
-const Link = ({ href, children, ...props }: React.ComponentProps<"a">) => {
+export const Link = ({
+  href,
+  children,
+  ...props
+}: React.ComponentProps<"a">) => {
   return (
     <a
       href={href}
