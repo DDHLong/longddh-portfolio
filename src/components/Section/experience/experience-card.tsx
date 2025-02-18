@@ -6,17 +6,9 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Calendar, ExternalLink } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { Glow } from "./glow";
-
-interface ExperienceCardProps {
-  title: string;
-  company: string;
-  date: string;
-  description: string;
-  skills: string[];
-  link: string;
-}
+import { ExperienceCardProps } from "./experience-data";
 
 const ExperienceCard = ({
   title,
@@ -34,13 +26,13 @@ const ExperienceCard = ({
             <CardHeader>
               <div className="flex items-center justify-between gap-4">
                 <div className="space-y-1">
-                  <CardTitle className="transition-colors duration-300 hover:text-primary">
+                  <CardTitle className="transition-colors duration-300 group-hover:text-sky-400">
                     {title}
                   </CardTitle>
-                  <CardDescription className="flex items-center gap-2">
+                  <CardDescription className="flex items-center gap-1">
                     {company}
                     <span className="inline-block">
-                      <ExternalLink className="w-4 h-4 transition-colors duration-300 group-hover:text-primary group-hover:scale-110" />
+                      <ArrowRight className="w-4 h-4 transition-colors duration-300 group-hover:text-primary group-hover:translate-x-1" />
                     </span>
                   </CardDescription>
                 </div>
@@ -54,11 +46,7 @@ const ExperienceCard = ({
               <div className="text-sm text-muted-foreground">{description}</div>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill: string) => (
-                  <Badge
-                    key={skill}
-                    variant="secondary"
-                    className="cursor-default"
-                  >
+                  <Badge key={skill} variant="secondary">
                     {skill}
                   </Badge>
                 ))}

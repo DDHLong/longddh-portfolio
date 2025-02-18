@@ -1,10 +1,19 @@
-const experienceData = [
+export interface ExperienceCardProps {
+  title: string;
+  company: string;
+  date: string;
+  description: string;
+  skills: string[];
+  link: string;
+}
+
+const experienceData: ExperienceCardProps[] = [
   {
     title: "Software Engineer",
     company: "FPT Software",
     date: "Apr 2024 - Present",
     description:
-      "Led the development of multiple high-impact web applications, improving overall performance by 40%. Mentored junior developers and implemented best practices for code quality and testing.",
+      "Build, style and ship high-quality websites for a wide range of clients including SK Telecom, LG, ADIB Bank, etc. Provide leadership to some projects and share knowledge between team members.",
     skills: ["React", "TypeScript", "Next.js", "CI/CD", "TailwindCSS"],
     link: "https://fptsoftware.com",
   },
@@ -13,8 +22,8 @@ const experienceData = [
     company: "Euroland Investor",
     date: "Jan 2023 - Apr 2024",
     description:
-      "Led the development of multiple high-impact web applications, improving overall performance by 40%. Mentored junior developers and implemented best practices for code quality and testing.",
-    skills: ["React", "TypeScript", "TailwindCSS", "JS"],
+      "Maintained and added new feature to a product-ready application. Worked with OpenAI and AI agent to build a chatbot for the website.",
+    skills: ["React", "TypeScript", "TailwindCSS", "JavaScript"],
     link: "https://www.euroland.com/",
   },
   {
@@ -22,7 +31,7 @@ const experienceData = [
     company: "VPBank Securities",
     date: "Jan 2022 - Jan 2023",
     description:
-      "Led the development of multiple high-impact web applications, improving overall performance by 40%. Mentored junior developers and implemented best practices for code quality and testing.",
+      "Collaborated with business analysts and designers to understand business requirements and translate them into technical solutions. Integrated visualization libraries and optimized website performance.",
     skills: ["React", "Next.js", "Ant Design", "Highcharts", "TradingView"],
     link: "https://vpbanks.com.vn/",
   },
@@ -31,7 +40,7 @@ const experienceData = [
     company: "Perfin",
     date: "Jan 2021 - Jan 2022",
     description:
-      "Led the development of multiple high-impact web applications, improving overall performance by 40%. Mentored junior developers and implemented best practices for code quality and testing.",
+      "Developed, maintained and delivered solutions for a startup. Learning both frontend (web, mobile) and backend while building a real product.",
     skills: [
       "React",
       "Next.js",
