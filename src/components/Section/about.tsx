@@ -15,7 +15,11 @@ const About = () => {
           and easy to use.
         </p>
         <p className="mb-4">
-          Currently, I'm a Middle Front-End Engineer at{" "}
+          Currently, I'm a{" "}
+          <span className="text-sky-400 font-medium">
+            Middle Front-End Engineer
+          </span>{" "}
+          at{" "}
           <Link href="https://fptsoftware.com/" target="_blank">
             Fpt Software
           </Link>

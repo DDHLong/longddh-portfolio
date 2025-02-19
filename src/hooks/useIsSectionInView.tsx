@@ -12,7 +12,7 @@ const useIsSectionInView = () => {
   });
   const experienceRef = useRef(null);
   const isExperienceInView = useInView(experienceRef, {
-    amount: 0.6,
+    amount: 0.7,
   });
   return {
     isProjectInView,

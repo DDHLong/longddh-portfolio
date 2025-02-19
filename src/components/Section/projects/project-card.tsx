@@ -41,7 +41,7 @@ const ProjectCard = ({
                 </p>
                 <div className="flex flex-wrap gap-2 mt-3">
                   {skills.map((skill: string) => (
-                    <Badge className="text-sm" key={skill} variant="secondary">
+                    <Badge key={skill} variant="secondary" className="text-sm">
                       {skill}
                     </Badge>
                   ))}

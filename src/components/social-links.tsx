@@ -23,7 +23,7 @@ const SocialLinks = () => {
     <div className="hidden lg:flex items-center gap-4 mt-8">
       {socialLinks.map((link) => (
         <a key={link.name} href={link.href} target="_blank">
-          <link.icon className="w-6 h-6 text-muted-foreground hover:text-primary" />
+          <link.icon className="w-6 h-6 text-muted-foreground hover:text-sky-400" />
         </a>
       ))}
     </div>
