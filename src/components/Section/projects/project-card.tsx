@@ -32,9 +32,9 @@ const ProjectCard = ({
             </div>
             <div className="flex flex-col h-full z-10">
               <div className="flex-grow">
-                <h3 className="font-semibold tracking-tight mb-1 transition-colors group-hover:text-sky-400 flex items-center gap-1">
+                <h3 className="font-semibold tracking-tight mb-1 transition-colors flex items-center gap-1">
                   {title}
-                  <ArrowRight className="w-4 h-4 transition-colors text-muted-foreground group-hover:text-sky-400 group-hover:translate-x-1 inline-block" />
+                  <ArrowRight className="w-4 h-4 transition-colors text-muted-foreground group-hover:text-primary group-hover:translate-x-1 inline-block" />
                 </h3>
                 <p className="text-muted-foreground leading-normal text-sm">
                   {description}
