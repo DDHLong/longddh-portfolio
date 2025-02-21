@@ -46,7 +46,11 @@ const ExperienceCard = ({
               <div className="text-sm text-muted-foreground">{description}</div>
               <div className="flex flex-wrap gap-2">
                 {skills.map((skill: string) => (
-                  <Badge key={skill} variant="secondary">
+                  <Badge
+                    key={skill}
+                    variant="secondary"
+                    className="dark:mix-blend-lighten"
+                  >
                     {skill}
                   </Badge>
                 ))}

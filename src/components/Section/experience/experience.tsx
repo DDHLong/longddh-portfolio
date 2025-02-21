@@ -11,7 +11,7 @@ const Experience = () => {
         Experience
       </h2>
       {theme === "dark" ? (
-        <GlowArea className="">
+        <GlowArea>
           <ol>
             {experienceData.map((experience) => (
               <ExperienceCard key={experience.title} {...experience} />

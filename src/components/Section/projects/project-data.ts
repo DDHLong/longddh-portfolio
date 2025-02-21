@@ -8,7 +8,7 @@ const projects = [
     description:
       "My first portfolio website built with React and Tailwind CSS. It's a simple portfolio website that showcases my projects, skills and a little bit of my drawing skills (which is not much).",
     image: portfolio,
-    link: "https://longddh.netlify.app",
+    link: "https://longddh.xyz",
     skills: [
       "React",
       "Tailwind CSS",
