@@ -24,7 +24,7 @@ const ExperienceCard = ({
         <Glow color="oklch(0.746 0.16 232.661)" className="rounded-xl">
           <Card className="w-full transition-all duration-300 group hover:shadow-lg">
             <CardHeader>
-              <div className="flex items-center justify-between gap-4">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
                 <div className="space-y-1">
                   <CardTitle className="transition-colors duration-300 group-hover:text-sky-400">
                     {title}
