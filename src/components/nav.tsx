@@ -12,7 +12,7 @@ const Navigation = ({
   isExperienceInView: boolean;
 }) => {
   return (
-    <div className="flex flex-col justify-between py-12 lg:py-24 lg:sticky lg:top-0 lg:max-h-screen">
+    <header className="flex flex-col justify-between py-12 lg:py-24 lg:sticky lg:top-0 lg:max-h-screen">
       <div className="flex flex-col gap-4 col-span-1 items-center text-center lg:items-start lg:text-left">
         <h1 className="scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl">
           LongDDH
@@ -45,7 +45,7 @@ const Navigation = ({
         </ul>
       </div>
       <SocialLinks />
-    </div>
+    </header>
   );
 };
 

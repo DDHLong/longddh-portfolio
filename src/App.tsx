@@ -24,7 +24,7 @@ function App() {
           isAboutInView={isAboutInView}
           isExperienceInView={isExperienceInView}
         />
-        <div className="col-span-2 lg:pt-24">
+        <main className="col-span-2 lg:pt-24">
           {[
             { ref: aboutRef, id: "about", Component: About },
             { ref: experienceRef, id: "experience", Component: Experience },
@@ -40,7 +40,7 @@ function App() {
             </section>
           ))}
           <Footer />
-        </div>
+        </main>
       </div>
     </ThemeProvider>
   );
