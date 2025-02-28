@@ -1,23 +1,36 @@
 import { useInView } from "motion/react";
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+
+type Section = "projects" | "about" | "experience";
 
 const useIsSectionInView = () => {
+  const [activeSection, setActiveSection] = useState<Section | null>(null);
+
+  // Create refs for each section
   const projectRef = useRef(null);
-  const isProjectInView = useInView(projectRef, {
-    amount: 0.6,
-  });
   const aboutRef = useRef(null);
-  const isAboutInView = useInView(aboutRef, {
-    amount: 0.7,
-  });
   const experienceRef = useRef(null);
-  const isExperienceInView = useInView(experienceRef, {
-    amount: 0.7,
-  });
+
+  // Track inView state for each section
+  const isProjectInView = useInView(projectRef, { amount: 0.3 });
+  const isAboutInView = useInView(aboutRef, { amount: 0.3 });
+  const isExperienceInView = useInView(experienceRef, { amount: 0.3 });
+
+  // Update active section based on which one is in view
+  useEffect(() => {
+    if (isProjectInView) {
+      setActiveSection("projects");
+    } else if (isAboutInView) {
+      setActiveSection("about");
+    } else if (isExperienceInView) {
+      setActiveSection("experience");
+    } else {
+      setActiveSection(null);
+    }
+  }, [isProjectInView, isAboutInView, isExperienceInView]);
+
   return {
-    isProjectInView,
-    isAboutInView,
-    isExperienceInView,
+    activeSection,
     projectRef,
     aboutRef,
     experienceRef,

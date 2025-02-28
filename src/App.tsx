@@ -7,23 +7,13 @@ import Footer from "./components/footer";
 import Navigation from "./components/nav";
 
 function App() {
-  const {
-    isProjectInView,
-    isAboutInView,
-    isExperienceInView,
-    projectRef,
-    aboutRef,
-    experienceRef,
-  } = useIsSectionInView();
+  const { activeSection, projectRef, aboutRef, experienceRef } =
+    useIsSectionInView();
 
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <div className="w-full min-h-screen px-6 lg:px-20 bg-background grid grid-cols-1 lg:grid-cols-3 lg:gap-20 max-w-screen-xl mx-auto">
-        <Navigation
-          isProjectInView={isProjectInView}
-          isAboutInView={isAboutInView}
-          isExperienceInView={isExperienceInView}
-        />
+        <Navigation activeSection={activeSection} />
         <main className="col-span-2 lg:pt-24">
           {[
             { ref: aboutRef, id: "about", Component: About },

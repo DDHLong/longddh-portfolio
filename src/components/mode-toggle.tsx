@@ -28,7 +28,7 @@ const ModeToggle = () => {
   };
 
   return (
-    <div className="flex items-center gap-4 relative size-46 justify-center">
+    <div className="flex items-center gap-4 relative size-46 justify-center [@media(max-height:768px)]:hidden">
       <img
         src={isDark ? avatarDark : avatarLight}
         alt="avatar"

@@ -2,15 +2,7 @@ import SocialLinks from "./social-links";
 import ModeToggle from "./mode-toggle";
 import NavItem from "./NavItem/nav-item";
 
-const Navigation = ({
-  isProjectInView,
-  isAboutInView,
-  isExperienceInView,
-}: {
-  isProjectInView: boolean;
-  isAboutInView: boolean;
-  isExperienceInView: boolean;
-}) => {
+const Navigation = ({ activeSection }: { activeSection: string | null }) => {
   return (
     <header className="flex flex-col justify-between py-12 lg:py-24 lg:sticky lg:top-0 lg:max-h-screen">
       <div className="flex flex-col gap-4 col-span-1 items-center text-center lg:items-start lg:text-left">
@@ -27,13 +19,21 @@ const Navigation = ({
         <ModeToggle />
         <ul className="w-max hidden lg:flex flex-col gap-4">
           {[
-            { title: "About", href: "about", isActive: isAboutInView },
+            {
+              title: "About",
+              href: "about",
+              isActive: activeSection === "about",
+            },
             {
               title: "Experience",
               href: "experience",
-              isActive: isExperienceInView,
+              isActive: activeSection === "experience",
             },
-            { title: "Projects", href: "projects", isActive: isProjectInView },
+            {
+              title: "Projects",
+              href: "projects",
+              isActive: activeSection === "projects",
+            },
           ].map((item) => (
             <NavItem
               key={item.href}
