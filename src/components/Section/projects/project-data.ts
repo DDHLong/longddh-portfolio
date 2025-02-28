@@ -1,6 +1,7 @@
 import portfolio from "@/assets/projects-image/portfolio.webp";
 import drcloud from "@/assets/projects-image/drcloud.webp";
 import vpbanks from "@/assets/projects-image/vpbanks.webp";
+import liquidGauge from "@/assets/projects-image/liquid-gauge.webp";
 
 const projects = [
   {
@@ -32,6 +33,14 @@ const projects = [
     image: vpbanks,
     link: "https://www.vpbanks.com.vn/",
     skills: ["React", "Redux", "Ant Design", "Web socket"],
+  },
+  {
+    title: "React TS Liquid Gauge",
+    description:
+      "A React component library for creating beautiful, animated liquid gauges. This project is a simple and reusable component that can be used in any React project.",
+    image: liquidGauge,
+    link: "https://www.npmjs.com/package/react-ts-liquid-gauge",
+    skills: ["React", "TypeScript", "D3.js", "Rollup", "TSup"],
   },
 ];
 
